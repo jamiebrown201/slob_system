@@ -1,6 +1,6 @@
 module ApplicationHelper
   def title(value = nil)
     @title = value if value
-    @title ? "Controller Demo - #{@title}" : "Controller Demo"
+    @title ? "#{@title}" : "Controller Demo"
   end
 end

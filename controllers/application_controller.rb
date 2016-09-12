@@ -9,6 +9,10 @@ class ApplicationController < Sinatra::Base
     enable :logging
   end
 
+  get '/' do
+    redirect('/home')
+  end
+
   # will be used to display 404 error pages
   not_found do
     title 'Not Found!'
