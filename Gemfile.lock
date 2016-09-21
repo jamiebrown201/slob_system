@@ -1,13 +1,36 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    addressable (2.4.0)
+    byebug (9.0.5)
+    capybara (2.6.2)
+      addressable
+      mime-types (>= 1.16)
+      nokogiri (>= 1.3.3)
+      rack (>= 1.0.0)
+      rack-test (>= 0.5.4)
+      xpath (~> 2.0)
     daemons (1.2.4)
     diff-lcs (1.2.5)
     erubis (2.7.0)
     eventmachine (1.2.0.1)
+    httparty (0.14.0)
+      multi_xml (>= 0.5.2)
+    json (2.0.2)
+    mime-types (3.1)
+      mime-types-data (~> 3.2015)
+    mime-types-data (3.2016.0521)
+    mini_portile2 (2.1.0)
+    multi_xml (0.5.5)
+    nokogiri (1.6.8)
+      mini_portile2 (~> 2.1.0)
+      pkg-config (~> 1.1.7)
+    pkg-config (1.1.7)
     rack (1.6.4)
     rack-protection (1.5.3)
       rack
+    rack-test (0.6.3)
+      rack (>= 1.0)
     rake (11.2.2)
     rspec (3.4.0)
       rspec-core (~> 3.4.0)
@@ -31,12 +54,18 @@ GEM
       eventmachine (~> 1.0, >= 1.0.4)
       rack (>= 1, < 3)
     tilt (2.0.5)
+    xpath (2.0.0)
+      nokogiri (~> 1.3)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
+  byebug
+  capybara
   erubis
+  httparty
+  json
   rake
   rspec
   sinatra

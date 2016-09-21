@@ -6,7 +6,11 @@ gem "sinatra", require: "sinatra/base"
 gem 'erubis'
 gem 'rake'
 gem 'thin'
+gem 'json'
+gem 'httparty'
 
 group :test do
   gem 'rspec'
+  gem 'capybara'
+  gem 'byebug'
 end
