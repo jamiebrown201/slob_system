@@ -1,8 +1,15 @@
 require 'httparty'
 
 class Recommendation
-  def self.basic_info
+
+  attr_reader :id
+  def initialize
+    @id = "No movie yet"
+  end
+
+  def basic_info
     url = "https://api.themoviedb.org/3/movie/76341?api_key=43f00d373c532ca6548ad04652be7889"
     response = HTTParty.get(url)
+    @id = response.parsed_response["id"]
   end
 end
