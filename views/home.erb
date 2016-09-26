@@ -1,4 +1,11 @@
 <form action="/home/recommendation">
   <input type="submit" value="Recommendation">
 </form>
-<%= @movie.id %>
+<% if @movie %>
+  <h2><%= @movie["title"] %></h2>
+  <img src="https://image.tmdb.org/t/p/w600_and_h900_bestv2/<%= @movie["poster_path"] %>" alt="<%= @movie["title"] %>" height="120">
+  <p><%= @movie["overview"] %></p>
+
+<% else %>
+  Please search for a movie
+<% end %>

@@ -6,14 +6,14 @@ class HomeController < ApplicationController
 
   get '/' do
     title "The slob system"
-    session["movie"] ||= OpenStruct.new(:id => "no movie yet")
+    session["movie"] ||= false
     @movie = session["movie"]
     erb :home
   end
 
   get '/recommendation' do
     recommendation = Recommendation.new
-    session["movie"] = recommendation
+    session["movie"] = recommendation.data
     redirect('/home')
   end
 
