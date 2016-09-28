@@ -12,7 +12,7 @@ class HomeController < ApplicationController
   end
 
   get '/recommendation' do
-    recommendation = Recommendation.new
+    recommendation = Recommendation.new(params["genre"])
     session["movie"] = recommendation.data
     redirect('/home')
   end
