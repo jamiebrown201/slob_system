@@ -1,9 +1,13 @@
 <form action="/home/recommendation">
+  <input type="radio" name="genre" value="action">Action<br>
+  <input type="radio" name="genre" value="adventure">Adventure<br>
+  <input type="radio" name="genre" value="comedy">Comedy<br>
+  <input type="radio" name="genre" value="scifi">Scifi<br>
   <input type="submit" value="Recommendation">
 </form>
 <% if @movie %>
   <h2><%= @movie["title"] %></h2>
-  <img src="https://image.tmdb.org/t/p/w600_and_h900_bestv2/<%= @movie["poster_path"] %>" alt="<%= @movie["title"] %>" height="120">
+  <img src="https://image.tmdb.org/t/p/w600_and_h900_bestv2/<%= @movie["poster_path"] %>" alt="<%= @movie["title"] %>" height="180">
   <p><%= @movie["overview"] %></p>
 
 <% else %>
